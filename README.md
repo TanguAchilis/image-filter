@@ -35,3 +35,6 @@ Elastic beanstalk endpoint: http://image-filter-tasd-dev.us-east-1.elasticbeanst
 ### API testing
 1) http://image-filter-tasd-dev.us-east-1.elasticbeanstalk.com/filteredimage?image_url=https://media.istockphoto.com/photos/giraffe-family-picture-id453469507?b=1%26k=20%26m=453469507%26s=170667a%26w=0%26h=pol4ebEcrSd-dnjsh8Z0_MhpG00ACyK5rVNo31ZyUe0=
 2) http://image-filter-tasd-dev.us-east-1.elasticbeanstalk.com/filteredimage?image_url=https://media.istockphoto.com/photos/crossing-the-road-picture-id1200246941?b=1&k=20&m=1200246941&s=170667a&w=0&h=xGX2JDeZASqylTbOHmcx44p6eZ7JiNyNrE_DJiWfbZ0=
+
+### Deployment screenshots
+1) ![Alt text](/deployment_screenshots/to/elastic beanstalk deployment proof.png?raw=true "Title")
