@@ -27,22 +27,11 @@ We've included a few helper functions to handle some of these concepts and we're
 import {filterImageFromURL, deleteLocalFiles} from './util/util';
 ```
 
-### Deploying your system
+### Deployed system
 
-Follow the process described in the course to `eb init` a new application and `eb create` a new environment to deploy your image-filter service! Don't forget you can use `eb deploy` to push changes.
+Elastic beanstalk endpoint: http://image-filter-tasd-dev.us-east-1.elasticbeanstalk.com/
 
-## Stand Out (Optional)
 
-### Refactor the course RESTapi
-
-If you're feeling up to it, refactor the course RESTapi to make a request to your newly provisioned image server.
-
-### Authentication
-
-Prevent requests without valid authentication headers.
-> !!NOTE if you choose to submit this, make sure to add the token to the postman collection and export the postman collection file to your submission so we can review!
-
-### Custom Domain Name
-
-Add your own domain name and have it point to the running services (try adding a subdomain name to point to the processing server)
-> !NOTE: Domain names are not included in AWS’ free tier and will incur a cost.
+### API testing
+1) http://image-filter-tasd-dev.us-east-1.elasticbeanstalk.com/filteredimage?image_url=https://media.istockphoto.com/photos/giraffe-family-picture-id453469507?b=1%26k=20%26m=453469507%26s=170667a%26w=0%26h=pol4ebEcrSd-dnjsh8Z0_MhpG00ACyK5rVNo31ZyUe0=
+2) http://image-filter-tasd-dev.us-east-1.elasticbeanstalk.com/filteredimage?image_url=https://media.istockphoto.com/photos/crossing-the-road-picture-id1200246941?b=1&k=20&m=1200246941&s=170667a&w=0&h=xGX2JDeZASqylTbOHmcx44p6eZ7JiNyNrE_DJiWfbZ0=
