@@ -41,7 +41,7 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
         deleteLocalFiles([filteredImage])
       })
     } catch (error) {
-      return res.status(424).send(`There was a problem processing your image soure and it resulted to the error: ${error}`)
+      return res.status(422).send(`There was a problem processing your image soure and it resulted to the error: ${error}`)
       
     }
 
