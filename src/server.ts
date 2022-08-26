@@ -30,7 +30,7 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
 
   /***********************************START @TODO1************************************ */
   app.get("/filteredimage", async(req: Request, res: Response)=>{
-    const image_url = req.query.image_url.toString();
+    const {image_url} = req.query;
     // console.log(typeof(image_url))
     if(!image_url){
       res.status(400).send(`no image url was provided`)
