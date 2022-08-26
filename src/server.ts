@@ -1,4 +1,5 @@
 import express from 'express';
+import {Router, Response, Request} from 'express';
 import bodyParser from 'body-parser';
 import {filterImageFromURL, deleteLocalFiles} from './util/util';
 
@@ -28,16 +29,22 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
   //   the filtered image file [!!TIP res.sendFile(filteredpath); might be useful]
 
   /***********************************START @TODO1************************************ */
-  app.get("/filteredimage", async(req, res)=>{
-    const image_url = req.query.image_url;
+  app.get("/filteredimage", async(req: Request, res: Response)=>{
+    const image_url = req.query.image_url.toString();
     // console.log(typeof(image_url))
     if(!image_url){
       res.status(400).send(`no image url was provided`)
     }
-    const filteredImage = await filterImageFromURL(image_url.toString())
-    return res.status(201).sendFile(filteredImage, ()=>{
-      deleteLocalFiles([filteredImage])
-    })
+    try {
+      const filteredImage = await filterImageFromURL(image_url)
+      return res.status(200).sendFile(filteredImage, ()=>{
+        deleteLocalFiles([filteredImage])
+      })
+    } catch (error) {
+      return res.status(424).send(`There was a problem processing your image soure and it resulted to the error: ${error}`)
+      
+    }
+
   })
     /**********************************END @TODO1************************************ */
   
